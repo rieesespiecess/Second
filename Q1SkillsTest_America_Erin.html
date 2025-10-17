@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Robotics Club Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style
+>
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    background-image: url{https://i.pinimg.com/originals/4b/06/e3/4b06e393fd0647c265b1282b0f006486.gif};
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur{3px};
+    margin: 50px;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 70%;
+    height: 70%;
+    max-width: 600px;
+    background-color: rgba(245, 245, 245, 0.8); /* same color but 80% opacity */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+
+h1, h3 {
+    color: #0057a3;
+    text-align: center;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #0057a3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #003d75;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+footer p {
+    text-align: center;
+    font-size: 10px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Smooth fade-in for container */
+.container {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Fade-in upward animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo bounce effect */
+.logo img {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Buttons hover glow */
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0077cc;
+    box-shadow: 0 0 12px rgba(0, 119, 204, 0.7);
+    transform: scale(1.05);
+}
+
+/* Inputs focus effect */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #0077cc;
+    box-shadow: 0 0 8px rgba(0, 119, 204, 0.5);
+    transition: 0.3s;
+}
+
+/* Fade-in for each form-section one after another */
+.form-section {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.form-section:nth-child(1) { animation-delay: 0.5s; }
+.form-section:nth-child(2) { animation-delay: 1s; }
+.form-section:nth-child(3) { animation-delay: 1.5s; }
+.form-section:nth-child(4) { animation-delay: 2s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+</style>
+<body>
+    <div class="container">
+         <!-- Logo -->
+        <div class="logo">
+            <img src="obmclogo.png" alt="Robotics Club Logo">
+        </div>
+
+        <h1><b><u>OBMC Robotics Club Application Form</u></b></h1>
+        <br>
+        <p> Welcome! Please fill out this form to <b>apply</b> for our school's <i>Robotics Club</i>.</p>
+        <br>
+
+        <form action="#" method="post">
+            <div class="form-section">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="grade">Grade Level:</label>
+                <select id="grade" name="grade">
+                    <option value="7">Grade 7</option>
+                    <option value="8">Grade 8</option>
+                    <option value="9">Grade 9</option>
+                    <option value="10">Grade 10</option>
+                    <option value="10">Grade 11</option>
+                    <option value="10">Grade 12</option>
+                </select><br><br>
+            </div>
+
+            <div class="form-section">
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label><br><br>
+
+                <label>What are your skills?</label><br>
+                <input type="checkbox" id="coding" name="skills" value="Coding">
+                <label for="coding">Coding</label>
+                <input type="checkbox" id="design" name="skills" value="Design">
+                <label for="design">Design</label>
+                <input type="checkbox" id="electronics" name="skills" value="Electronics">
+                <label for="editing">Electronics</label><br><br>
+                <input type="checkbox" id="editing" name="skills" value="Editing">
+                <label for="editing">Editing</label><br><br>
+            </div>
+
+            <div class="form-section">
+                <label for="about">Tell us why you want to join:</label><br>
+                <textarea id="about" name="about" rows="4" cols="40"></textarea><br><br>
+            </div>
+
+            <div class="form-section">
+                <h3>Top Robotics Activities We Offer:</h3>
+                <ul>
+                    <li>Line Following Robots</li>
+                    <li>Obstacle Avoidance Programming</li>
+                    <li> Light Following Robot </li>
+                </ul>
+
+                <h3>Helpful Links:</h3>
+                <ol>
+                    <li><a href="https://www.robotics.org">Robotics.org</a></li>
+                    <li><a href="https://www.firstinspires.org">FIRST Robotics</a></li>
+                </ol>
+            </div>
+
+            <div class="form-section">
+                <button type="submit">Submit Application</button>
+            </div>
+        </form>
+                
+    </div>
+        
+        <footer>
+            <p>&copy; 2025 Robotics Club Application | Created by [Your Name & Section]</p>
+        </footer>
+ 
+
+
+    </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Recommendation </title>
+  <style>
+    body {
+      background-image: url(https://i.pinimg.com/736x/db/36/d1/db36d1c9c0ee0a3858aa88339f5930c3.jpg);
+      background-size: cover;
+      margin: 40px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 500px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .checkbox-group,
+    .radio-group {
+      margin-top: 5px;
+      display: inline-flex;
+    }
+
+    .checkbox-group label,
+    .radio-group label {
+      font-weight: normal;
+      margin-right: 10px;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Music Recommendation </h2>
+    <form>
+      <!-- Input Fields -->
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="email" required>
+
+      <!-- Textarea -->
+      <label for="movie">Recommended Music Title:</label>
+      <input type="text" id="movie" name="movie" required>
+
+      <label for="reason">Why do you recommend it?</label>
+      <textarea id="reason" name="reason" rows="4" placeholder="feedback here..." required></textarea>
+      <br>
+      <br>
+
+      <!-- Checkbox: Genres -->
+      <label>Genres (select all that apply):</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="pop" name="genre" value="pop">
+        <label for="action">Pop Music</label>
+
+        <input type="checkbox" id="kpop" name="genre" value="kpop">
+        <label for="comedy">Kpop</label>
+
+        <input type="checkbox" id="jazz" name="genre" value="jazz">
+        <label for="drama">Jazz</label>
+
+        <input type="checkbox" id="rock" name="genre" value="rock">
+        <label for="fantasy">Rock</label>
+
+        <input type="checkbox" id="classical" name="genre" value="classical">
+        <label for="sci-fi">Classical</label>
+      </div>
+
+    <br>
+    <br>
+
+      <!-- Radio: Movie Rating -->
+      <label>Rate the Music:</label>
+      <div class="radio-group">
+        <input type="radio" id="rate1" name="rating" value="1" required>
+        <label for="rate1">1</label>
+
+        <input type="radio" id="rate2" name="rating" value="2">
+        <label for="rate2">2</label>
+
+        <input type="radio" id="rate3" name="rating" value="3">
+        <label for="rate3">3</label>
+
+        <input type="radio" id="rate4" name="rating" value="4">
+        <label for="rate4">4</label>
+
+        <input type="radio" id="rate5" name="rating" value="5">
+        <label for="rate5">5 (Best)</label>
+      </div>
+
+    <br>
+    <br>
+
+      <!-- Select -->
+      <label for="platform">Where did you stream it?</label>
+      <select id="platform" name="platform" required>
+        <option value="">-- Select Platform --</option>
+        <option value="Netflix">Spotify</option>
+        <option value="Disney+">YouTube Music</option>
+        <option value="Cinema">Apple Music</option>
+        <option value="Amazon Prime">SoundCloud</option>
+      </select>
+    
+    <br>
+    <br>
+
+      <!-- Submit -->
+      <button type="submit">Submit Recommendation</button>
+    </form>
+  </div>
+
+</body>
+</html>
